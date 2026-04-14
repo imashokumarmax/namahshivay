@@ -12,10 +12,14 @@ export const propertyCategories = [
 export const locations = [
   'Noida',
   'Greater Noida',
+  'Greater Noida West',
+  'Ghaziabad',
+  'Jewar Airport',
+  'Yamuna Expressway',
+  'Noida Extension',
   'Delhi',
   'Gurugram',
-  'Faridabad',
-  'Noida Extension'
+  'Faridabad'
 ];
 
 export const mockProperties = [

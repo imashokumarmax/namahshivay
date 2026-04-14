@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Phone, Mail, MessageCircle, MapPin, Send } from 'lucide-react';
+import { Phone, Mail, MessageCircle, MapPin, Send, Building2, Clock } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { toast } from 'sonner';
+import { offices } from '../data/locations';
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -37,8 +38,9 @@ export const ContactSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <div className="space-y-8">
+          {/* Contact Info and Offices */}
+          <div className="space-y-6">
+            {/* Primary Contact Card */}
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
               
@@ -62,21 +64,10 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                    <a href="mailto:info@ncr-dreamhomes.com" className="text-emerald-600 hover:text-emerald-700">
-                      info@ncr-dreamhomes.com
+                    <a href="mailto:ncr.dreamhomes@gmail.com" className="text-emerald-600 hover:text-emerald-700 break-all">
+                      ncr.dreamhomes@gmail.com
                     </a>
                     <p className="text-sm text-gray-600 mt-1">We'll respond within 24 hours</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-emerald-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Office</h4>
-                    <p className="text-gray-600">Noida, Uttar Pradesh</p>
-                    <p className="text-sm text-gray-600 mt-1">Serving all NCR regions</p>
                   </div>
                 </div>
               </div>
@@ -89,6 +80,51 @@ export const ContactSection = () => {
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Chat on WhatsApp
                 </Button>
+              </div>
+            </div>
+
+            {/* Office Locations */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+              <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                <Building2 className="w-5 h-5 text-emerald-600" />
+                Our Office Locations
+              </h3>
+              
+              <div className="space-y-6">
+                {offices.map((office) => (
+                  <div key={office.id} className="group">
+                    <div className="flex items-start gap-3">
+                      <MapPin className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-1" />
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-gray-900 mb-1">
+                          {office.name}
+                          {office.isPrimary && (
+                            <span className="ml-2 text-xs bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full">
+                              Primary
+                            </span>
+                          )}
+                        </h4>
+                        <p className="text-sm text-gray-600">{office.address}</p>
+                        <p className="text-sm text-gray-600">{office.area}</p>
+                        <div className="flex items-center gap-1 text-xs text-gray-500 mt-1">
+                          <Clock className="w-3 h-3" />
+                          <span>{office.timings}</span>
+                        </div>
+                        <a
+                          href={office.mapLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-emerald-600 hover:text-emerald-700 inline-flex items-center gap-1 mt-2"
+                        >
+                          View on Map →
+                        </a>
+                      </div>
+                    </div>
+                    {office.id !== offices.length && (
+                      <div className="border-b border-gray-200 mt-4"></div>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
 

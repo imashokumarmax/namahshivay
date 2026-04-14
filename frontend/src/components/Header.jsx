@@ -13,13 +13,16 @@ export const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-emerald-600 to-teal-700 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">NCR</span>
+            <a href="/" className="flex items-center space-x-3">
+              <div className="relative">
+                <div className="w-12 h-12 bg-gradient-to-br from-emerald-600 to-teal-700 rounded-xl flex items-center justify-center shadow-lg">
+                  <span className="text-white font-bold text-xl">NCR</span>
+                </div>
+                <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full border-2 border-white"></div>
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-xl font-bold text-gray-900">NCR Dream Homes</h1>
-                <p className="text-xs text-gray-600">Premium Properties in NCR</p>
+                <h1 className="text-xl font-bold text-gray-900 leading-tight">NCR Dream Homes</h1>
+                <p className="text-xs text-emerald-600 font-semibold">Plots Near Jewar Airport</p>
               </div>
             </a>
           </div>

@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { SEOHead } from './components/SEOHead';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
+import { AISearchSection } from './components/AISearchSection';
 import { Categories } from './components/Categories';
+import { PlotsSection } from './components/PlotsSection';
 import { PropertyCard } from './components/PropertyCard';
-import { Testimonials } from './components/Testimonials';
+import { ReviewsSection } from './components/ReviewsSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
-import { mockProperties, propertyCategories, testimonials } from './mock';
+import { mockProperties, propertyCategories } from './mock';
+import { plotListings } from './data/plots';
 import { Toaster } from './components/ui/sonner';
 import { toast } from 'sonner';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from './components/ui/dialog';
@@ -15,10 +19,11 @@ import { Button } from './components/ui/button';
 import { Phone, MessageCircle, Mail } from 'lucide-react';
 
 function App() {
-  const [filteredProperties, setFilteredProperties] = useState(mockProperties);
+  const [filteredProperties, setFilteredProperties] = useState([...mockProperties, ...plotListings]);
   const [selectedCategory, setSelectedCategory] = useState('');
   const [selectedProperty, setSelectedProperty] = useState(null);
   const [contactDialogOpen, setContactDialogOpen] = useState(false);
+  const [allProperties] = useState([...mockProperties, ...plotListings]);
 
   useEffect(() => {
     filterProperties();
@@ -91,6 +96,7 @@ function App() {
 
   return (
     <div className="App">
+      <SEOHead />
       <Toaster position="top-right" />
       
       <Header />
@@ -98,14 +104,18 @@ function App() {
       <main>
         <Hero onSearch={handleSearch} />
         
+        <AISearchSection onSearch={handleSearch} />
+        
         <Categories
           categories={propertyCategories}
           onCategorySelect={handleCategorySelect}
           selectedCategory={selectedCategory}
         />
 
-        {/* Properties Grid */}
-        <section className="py-16 bg-white">
+        <PlotsSection onContact={handleContactProperty} />
+
+        {/* All Properties Grid */}
+        <section className="py-16 bg-gray-50" id="all-properties">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center mb-8">
               <div>
@@ -139,12 +149,12 @@ function App() {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-16">
+              <div className="text-center py-16 bg-white rounded-2xl">
                 <p className="text-gray-600 text-lg">No properties found matching your criteria</p>
                 <Button
                   onClick={() => {
                     setSelectedCategory('');
-                    setFilteredProperties(mockProperties);
+                    setFilteredProperties(allProperties);
                   }}
                   className="mt-4 bg-emerald-600 hover:bg-emerald-700"
                 >
@@ -155,7 +165,7 @@ function App() {
           </div>
         </section>
 
-        <Testimonials testimonials={testimonials} />
+        <ReviewsSection />
         
         <ContactSection />
       </main>

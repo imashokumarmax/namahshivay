@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Youtube, Twitter } from 'lucide-react';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -72,8 +72,8 @@ export const Footer = () => {
               </li>
               <li className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                <a href="mailto:info@ncr-dreamhomes.com" className="hover:text-emerald-400 transition-colors">
-                  info@ncr-dreamhomes.com
+                <a href="mailto:ncr.dreamhomes@gmail.com" className="hover:text-emerald-400 transition-colors">
+                  ncr.dreamhomes@gmail.com
                 </a>
               </li>
               <li className="flex items-start space-x-3">

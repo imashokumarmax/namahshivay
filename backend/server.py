@@ -6,9 +6,10 @@ import os
 import logging
 from pathlib import Path
 from pydantic import BaseModel, Field, ConfigDict
-from typing import List
+from typing import List, Optional
 import uuid
 from datetime import datetime, timezone
+from routers import ai_agent
 
 
 ROOT_DIR = Path(__file__).parent
@@ -68,6 +69,8 @@ async def get_status_checks():
 
 # Include the router in the main app
 app.include_router(api_router)
+# AI Agent router will be added after testing
+# app.include_router(ai_agent.router)
 
 app.add_middleware(
     CORSMiddleware,
