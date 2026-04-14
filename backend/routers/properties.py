@@ -47,8 +47,13 @@ async def create_property(property: Property):
         raise HTTPException(status_code=500, detail=str(e))
 
 @router.get("/")
-async def get_properties(location: Optional[str] = None, category: Optional[str] = None):
-    """Get all properties with optional filters"""
+async def get_properties(
+    location: Optional[str] = None, 
+    category: Optional[str] = None,
+    skip: int = 0,
+    limit: int = 50
+):
+    """Get properties with optional filters and pagination"""
     try:
         query = {}
         if location:
@@ -56,8 +61,29 @@ async def get_properties(location: Optional[str] = None, category: Optional[str]
         if category:
             query["category"] = category
         
-        properties = await db.properties.find(query).to_list(100)
-        return {"count": len(properties), "properties": properties}
+        # Field projection - only return essential fields
+        projection = {
+            "title": 1,
+            "description": 1,
+            "location": 1,
+            "price": 1,
+            "area": 1,
+            "property_type": 1,
+            "category": 1,
+            "features": 1,
+            "image": 1
+        }
+        
+        properties = await db.properties.find(query, projection).skip(skip).limit(limit).to_list(limit)
+        total_count = await db.properties.count_documents(query)
+        
+        return {
+            "count": len(properties),
+            "total": total_count,
+            "skip": skip,
+            "limit": limit,
+            "properties": properties
+        }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -71,10 +97,28 @@ async def submit_contact_form(contact: ContactForm):
         raise HTTPException(status_code=500, detail=str(e))
 
 @router.get("/contact")
-async def get_contact_inquiries():
-    """Get all contact inquiries (admin only)"""
+async def get_contact_inquiries(skip: int = 0, limit: int = 50):
+    """Get contact inquiries with pagination (admin only)"""
     try:
-        inquiries = await db.contact_inquiries.find().sort("submitted_at", -1).to_list(100)
-        return {"count": len(inquiries), "inquiries": inquiries}
+        # Field projection - only essential fields
+        projection = {
+            "name": 1,
+            "email": 1,
+            "phone": 1,
+            "message": 1,
+            "property_id": 1,
+            "submitted_at": 1
+        }
+        
+        inquiries = await db.contact_inquiries.find({}, projection).sort("submitted_at", -1).skip(skip).limit(limit).to_list(limit)
+        total_count = await db.contact_inquiries.count_documents({})
+        
+        return {
+            "count": len(inquiries),
+            "total": total_count,
+            "skip": skip,
+            "limit": limit,
+            "inquiries": inquiries
+        }
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
