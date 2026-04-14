@@ -122,23 +122,70 @@ export const propertyTypeFocus = [
     locations: ['Greater Noida', 'Noida Extension', 'Ghaziabad Indirapuram', 'Noida Sector 150'],
     priceRange: '₹1.5 Cr - ₹5 Cr',
     popular: true
-  },
-  {
-    type: 'Residential Flats',
-    locations: ['Noida Sector 137', 'Ghaziabad Indirapuram', 'Greater Noida Alpha', 'Noida Extension'],
-    priceRange: '₹40 Lacs - ₹2 Cr',
-    popular: true
-  },
-  {
-    type: 'Commercial Offices',
-    locations: ['Noida Sector 62', 'Noida Sector 132', 'Greater Noida Techzone', 'Ghaziabad Vaishali'],
-    priceRange: '₹50 Lacs - ₹5 Cr',
-    popular: false
-  },
-  {
-    type: 'Commercial Buildings',
-    locations: ['Noida Sector 18', 'Greater Noida Pari Chowk', 'Ghaziabad Crossing Republik'],
-    priceRange: '₹10 Cr - ₹50 Cr',
-    popular: false
   }
 ];
+
+// Location-based property data for landing pages
+export const locationProperties = {
+  'noida': {
+    displayName: 'Noida Properties',
+    areas: ['Sector 62', 'Sector 137', 'Sector 150', 'Sector 132', 'Sector 18', 'Film City'],
+    mainKeywords: [
+      'Plots in Noida',
+      'Residential Flats Noida',
+      'Commercial Offices Noida',
+      'Villas in Noida',
+      'Farmhouse in Noida'
+    ],
+    description: 'Premium properties in Noida with metro connectivity, IT parks, and modern infrastructure'
+  },
+  'ghaziabad': {
+    displayName: 'Ghaziabad Properties',
+    areas: ['Indirapuram', 'Vaishali', 'Vasundhara', 'Crossings Republik', 'Raj Nagar Extension'],
+    mainKeywords: [
+      'Plots in Ghaziabad',
+      'Residential Flats Ghaziabad',
+      'Villas in Ghaziabad Indirapuram',
+      'Builder Floor Indirapuram',
+      'Commercial Property Ghaziabad'
+    ],
+    description: 'Affordable and premium properties in Ghaziabad with excellent connectivity'
+  },
+  'greater-noida': {
+    displayName: 'Greater Noida Properties',
+    areas: ['Alpha Sector', 'Beta Sector', 'Pari Chowk', 'Knowledge Park', 'Techzone'],
+    mainKeywords: [
+      'Plots in Greater Noida',
+      'Residential Land Greater Noida',
+      'Farmhouse Greater Noida',
+      'Villas Greater Noida',
+      'Authority Plots Greater Noida'
+    ],
+    description: 'YEIDA approved plots and premium properties in planned Greater Noida city'
+  },
+  'greater-noida-west': {
+    displayName: 'Greater Noida West Properties',
+    areas: ['Sector 1', 'Sector 16B', 'Gaur City', 'YEIDA Sector 15-C', 'YEIDA Sector 18'],
+    mainKeywords: [
+      'Plots Greater Noida West',
+      'YEIDA Plots',
+      'Affordable Flats Greater Noida West',
+      'Residential Plots Greater Noida West',
+      'Investment Property Greater Noida West'
+    ],
+    description: 'YEIDA approved plots and affordable housing in emerging Greater Noida West'
+  },
+  'jewar-airport': {
+    displayName: 'Jewar Airport Properties',
+    areas: ['Yamuna Expressway', 'Sector 18', 'Sector 24', 'Dankaur', 'Near Airport Terminal'],
+    mainKeywords: [
+      'Plots Near Jewar Airport',
+      'Farmhouse Near Jewar Airport',
+      'Investment Property Jewar Airport',
+      'Authority Land Near Jewar Airport',
+      'Residential Plots Near Airport',
+      'Luxury Farmhouse Yamuna Expressway'
+    ],
+    description: 'High ROI investment properties near Noida International Airport Jewar'
+  }
+};
