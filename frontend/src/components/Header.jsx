@@ -22,7 +22,7 @@ export const Header = () => {
               </div>
               <div className="hidden sm:block">
                 <h1 className="text-xl font-bold text-gray-900 leading-tight">NCR-DREAMHOMES</h1>
-                <p className="text-xs text-emerald-600 font-semibold">Plots Near Jewar Airport</p>
+                <p className="text-xs text-emerald-600 font-semibold">Dream Homes for All</p>
               </div>
             </a>
           </div>
