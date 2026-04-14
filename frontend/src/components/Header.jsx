@@ -21,7 +21,7 @@ export const Header = () => {
                 <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full border-2 border-white"></div>
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-xl font-bold text-gray-900 leading-tight">NCR Dream Homes</h1>
+                <h1 className="text-xl font-bold text-gray-900 leading-tight">NCR-DREAMHOMES</h1>
                 <p className="text-xs text-emerald-600 font-semibold">Plots Near Jewar Airport</p>
               </div>
             </a>
@@ -29,15 +29,15 @@ export const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {menuItems.map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-gray-700 hover:text-emerald-600 font-medium transition-colors duration-200"
-              >
+            {menuItems.map((item) =>
+            <a
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              className="text-gray-700 hover:text-emerald-600 font-medium transition-colors duration-200">
+
                 {item}
               </a>
-            ))}
+            )}
           </nav>
 
           {/* Contact Button */}
@@ -54,30 +54,30 @@ export const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-          >
-            {mobileMenuOpen ? (
-              <X className="w-6 h-6 text-gray-700" />
-            ) : (
-              <Menu className="w-6 h-6 text-gray-700" />
-            )}
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+
+            {mobileMenuOpen ?
+            <X className="w-6 h-6 text-gray-700" /> :
+
+            <Menu className="w-6 h-6 text-gray-700" />
+            }
           </button>
         </div>
 
         {/* Mobile menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+        {mobileMenuOpen &&
+        <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-4">
-              {menuItems.map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="text-gray-700 hover:text-emerald-600 font-medium transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
+              {menuItems.map((item) =>
+            <a
+              key={item}
+              href={`#${item.toLowerCase()}`}
+              className="text-gray-700 hover:text-emerald-600 font-medium transition-colors"
+              onClick={() => setMobileMenuOpen(false)}>
+
                   {item}
                 </a>
-              ))}
+            )}
               <a href="tel:8287873037" className="flex items-center space-x-2 text-gray-700 hover:text-emerald-600">
                 <Phone className="w-4 h-4" />
                 <span className="font-semibold">8287873037</span>
@@ -87,8 +87,8 @@ export const Header = () => {
               </Button>
             </nav>
           </div>
-        )}
+        }
       </div>
-    </header>
-  );
+    </header>);
+
 };
