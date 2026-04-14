@@ -16,10 +16,7 @@ export const locations = [
   'Ghaziabad',
   'Jewar Airport',
   'Yamuna Expressway',
-  'Noida Extension',
-  'Delhi',
-  'Gurugram',
-  'Faridabad'
+  'Noida Extension'
 ];
 
 export const mockProperties = [
