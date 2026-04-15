@@ -7,8 +7,8 @@ export const offices = [
     address: 'C-520, 5th Floor, i-Thum Tower',
     area: 'Sector-62, Noida - 201301',
     state: 'Uttar Pradesh',
-    phone: '8287873037',
-    email: 'ncr.dreamhomes@gmail.com',
+    phone: '8287673037',
+    email: 'ashokumarmax@gmail.com',
     timings: 'Mon-Sat: 9:00 AM - 7:00 PM',
     mapLink: 'https://maps.google.com/?q=i-Thum+Tower+Noida',
     isPrimary: true
@@ -19,8 +19,8 @@ export const offices = [
     address: '324, Ahinsha Khand 2, Indirapuram',
     area: 'Ghaziabad - 201012',
     state: 'Uttar Pradesh',
-    phone: '8287873037',
-    email: 'ncr.dreamhomes@gmail.com',
+    phone: '8287673037',
+    email: 'ashokumarmax@gmail.com',
     timings: 'Mon-Sat: 9:00 AM - 7:00 PM',
     mapLink: 'https://maps.google.com/?q=Indirapuram+Ghaziabad',
     isPrimary: false
@@ -31,8 +31,8 @@ export const offices = [
     address: 'B-333, 3rd Floor, B-Block, Logix Technova Park',
     area: 'Sector 132, Noida',
     state: 'Uttar Pradesh',
-    phone: '8287873037',
-    email: 'ncr.dreamhomes@gmail.com',
+    phone: '8287673037',
+    email: 'ashokumarmax@gmail.com',
     timings: 'Mon-Sat: 9:00 AM - 7:00 PM',
     mapLink: 'https://maps.google.com/?q=Logix+Technova+Noida',
     isPrimary: false

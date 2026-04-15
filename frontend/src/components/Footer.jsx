@@ -1,5 +1,6 @@
 import React from 'react';
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Youtube, Twitter } from 'lucide-react';
+import { footerSEOSections } from '../data/footer-keywords';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -66,14 +67,14 @@ export const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                <a href="tel:8287873037" className="hover:text-emerald-400 transition-colors">
-                  8287873037
+                <a href="tel:+918287673037" className="hover:text-emerald-400 transition-colors">
+                  +91-8287673037
                 </a>
               </li>
               <li className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                <a href="mailto:ncr.dreamhomes@gmail.com" className="hover:text-emerald-400 transition-colors">
-                  ncr.dreamhomes@gmail.com
+                <a href="mailto:ashokumarmax@gmail.com" className="hover:text-emerald-400 transition-colors">
+                  ashokumarmax@gmail.com
                 </a>
               </li>
               <li className="flex items-start space-x-3">
@@ -95,6 +96,49 @@ export const Footer = () => {
               <a href="https://ncr-dreamhomes.com" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors">
                 www.ncr-dreamhomes.com
               </a>
+            </div>
+          </div>
+        </div>
+
+        {/* SEO Keywords Section */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <h3 className="text-white font-semibold mb-6 text-center">Popular Property Searches</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {footerSEOSections.map((section, idx) => (
+              <div key={idx}>
+                <h4 className="text-emerald-400 font-semibold mb-3 text-sm">{section.title}</h4>
+                <ul className="space-y-1">
+                  {section.keywords.map((keyword, kidx) => (
+                    <li key={kidx}>
+                      <a href="#" className="text-xs text-gray-400 hover:text-emerald-400 transition-colors line-clamp-1">
+                        {keyword}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          
+          {/* Additional Keywords Cloud */}
+          <div className="mt-8 pt-6 border-t border-gray-800">
+            <div className="flex flex-wrap gap-2 justify-center">
+              {[
+                'YEIDA Plots',
+                'Jewar Airport Properties',
+                'Yamuna Expressway',
+                'Formula 1 Track Noida',
+                'Greater Noida Film City',
+                'Eco-friendly Farmhouse',
+                'Gated Community',
+                'Investment Property',
+                'Authority Land',
+                'Ready to Move'
+              ].map((tag, idx) => (
+                <span key={idx} className="px-3 py-1 bg-gray-800 text-gray-400 text-xs rounded-full hover:bg-emerald-600 hover:text-white transition-colors cursor-pointer">
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
         </div>

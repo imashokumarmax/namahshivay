@@ -155,7 +155,7 @@ export const PlotsSection = ({ onContact }) => {
               size="lg"
               variant="outline"
               className="border-2 border-white text-white hover:bg-white/10"
-              onClick={() => window.open('https://wa.me/918287873037?text=I want custom plot requirements', '_blank')}
+              onClick={() => window.open('https://wa.me/918287673037?text=I want custom plot requirements', '_blank')}
             >
               WhatsApp Us
             </Button>

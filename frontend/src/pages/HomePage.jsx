@@ -89,11 +89,11 @@ const HomePage = () => {
 
   const handleWhatsAppContact = () => {
     const message = `Hi, I'm interested in: ${selectedProperty.title} - ${selectedProperty.location} (${selectedProperty.price})`;
-    window.open(`https://wa.me/918287873037?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/918287673037?text=${encodeURIComponent(message)}`, '_blank');
   };
 
   const handlePhoneContact = () => {
-    window.location.href = 'tel:8287873037';
+    window.location.href = 'tel:+918287673037';
   };
 
   return (
@@ -198,7 +198,7 @@ const HomePage = () => {
                 className="w-full bg-green-600 hover:bg-green-700 text-white h-12"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
-                WhatsApp: 8287873037
+                WhatsApp: +91-8287673037
               </Button>
 
               <Button
@@ -206,7 +206,7 @@ const HomePage = () => {
                 className="w-full bg-emerald-600 hover:bg-emerald-700 text-white h-12"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call: 8287873037
+                Call: +91-8287673037
               </Button>
 
               <a href="#contact" onClick={() => setContactDialogOpen(false)}>

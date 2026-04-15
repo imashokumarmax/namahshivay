@@ -16,13 +16,20 @@ export const ContactSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Mock form submission
-    toast.success('Thank you! We will contact you shortly.');
+    // Send form data to ashokumarmax@gmail.com
+    const formData = {
+      ...formData,
+      to: 'ashokumarmax@gmail.com',
+      timestamp: new Date().toISOString()
+    };
+    
+    // Mock form submission - in production, this would send email
+    toast.success('Thank you! We will contact you shortly at ashokumarmax@gmail.com');
     setFormData({ name: '', email: '', phone: '', message: '' });
   };
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/918287873037?text=Hi, I am interested in your properties', '_blank');
+    window.open('https://wa.me/918287673037?text=Hi, I am interested in your properties', '_blank');
   };
 
   return (
@@ -51,8 +58,8 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                    <a href="tel:8287873037" className="text-emerald-600 hover:text-emerald-700 text-lg font-semibold">
-                      8287873037
+                    <a href="tel:+918287673037" className="text-emerald-600 hover:text-emerald-700 text-lg font-semibold">
+                      +91-8287673037
                     </a>
                     <p className="text-sm text-gray-600 mt-1">Mon - Sat, 9AM - 7PM</p>
                   </div>
@@ -64,8 +71,8 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                    <a href="mailto:ncr.dreamhomes@gmail.com" className="text-emerald-600 hover:text-emerald-700 break-all">
-                      ncr.dreamhomes@gmail.com
+                    <a href="mailto:ashokumarmax@gmail.com" className="text-emerald-600 hover:text-emerald-700 break-all">
+                      ashokumarmax@gmail.com
                     </a>
                     <p className="text-sm text-gray-600 mt-1">We'll respond within 24 hours</p>
                   </div>

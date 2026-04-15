@@ -8,8 +8,8 @@ export const SEOHead = () => {
     "name": "NCR Dream Homes",
     "description": "Premium residential & commercial plots, farmhouses, villas in Noida, Ghaziabad, Greater Noida, Jewar Airport. YEIDA approved properties.",
     "url": "https://ncr-dreamhomes.com",
-    "telephone": "+91-8287873037",
-    "email": "ncr.dreamhomes@gmail.com",
+    "telephone": "+91-8287673037",
+    "email": "ashokumarmax@gmail.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Noida",
@@ -45,7 +45,7 @@ export const SEOHead = () => {
       />
       <meta 
         name="description" 
-        content="Premium residential & commercial plots in Noida, Ghaziabad, Greater Noida, Jewar Airport area. YEIDA approved plots from ₹36,250/sqft. Best investment 2026. Same day registry. Call 8287873037" 
+        content="Premium residential & commercial plots in Noida, Ghaziabad, Greater Noida, Jewar Airport area. YEIDA approved plots from ₹36,250/sqft. Best investment 2026. Same day registry. Call +91-8287673037" 
       />
       <meta 
         name="keywords" 
@@ -62,7 +62,7 @@ export const SEOHead = () => {
       />
       <meta 
         property="og:description" 
-        content="YEIDA approved residential & commercial plots in Noida, Ghaziabad, Greater Noida, Jewar Airport. Best investment opportunity 2026. Call 8287873037" 
+        content="YEIDA approved residential & commercial plots in Noida, Ghaziabad, Greater Noida, Jewar Airport. Best investment opportunity 2026. Call +91-8287673037" 
       />
       <meta 
         property="og:image" 

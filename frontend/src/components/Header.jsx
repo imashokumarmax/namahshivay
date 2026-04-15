@@ -42,9 +42,9 @@ export const Header = () => {
 
           {/* Contact Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:8287873037" className="flex items-center space-x-2 text-gray-700 hover:text-emerald-600 transition-colors">
+            <a href="tel:8287673037" className="flex items-center space-x-2 text-gray-700 hover:text-emerald-600 transition-colors">
               <Phone className="w-4 h-4" />
-              <span className="font-semibold">8287873037</span>
+              <span className="font-semibold">+91-8287673037</span>
             </a>
             <Button className="bg-emerald-600 hover:bg-emerald-700 text-white">
               List Property

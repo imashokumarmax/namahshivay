@@ -241,12 +241,12 @@ export const propertyServices = {
 export const locationSEO = {
   'noida': {
     title: 'Buy Plots & Properties in Noida | Commercial & Residential | NCR Dream Homes',
-    description: 'Premium plots, flats, villas & commercial properties in Noida. Sector 62, 137, 150, 132. Metro connected. Best prices 2026. Call 8287873037',
+    description: 'Premium plots, flats, villas & commercial properties in Noida. Sector 62, 137, 150, 132. Metro connected. Best prices 2026. Call +91-8287673037',
     keywords: 'plots in noida, residential plots noida, commercial property noida, flats in noida, villas noida, property in noida sector 62, noida film city plots'
   },
   'ghaziabad': {
     title: 'Buy Plots & Properties in Ghaziabad | Indirapuram | NCR Dream Homes',
-    description: 'Residential & commercial properties in Ghaziabad Indirapuram, Vaishali, Crossings. Plots, flats, villas. Best deals 2026. Call 8287873037',
+    description: 'Residential & commercial properties in Ghaziabad Indirapuram, Vaishali, Crossings. Plots, flats, villas. Best deals 2026. Call +91-8287673037',
     keywords: 'plots in ghaziabad, ghaziabad property, indirapuram flats, ghaziabad villas, residential plots ghaziabad, commercial property ghaziabad'
   },
   'greater-noida': {
