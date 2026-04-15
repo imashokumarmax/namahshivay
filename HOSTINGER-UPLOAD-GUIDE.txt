@@ -1,0 +1,136 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║   HOSTINGER CPANEL UPLOAD GUIDE - COPY & PASTE METHOD              ║
+║              Website: ncr-dreamhomes.com                             ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+📋 FILES YOU NEED TO CREATE IN HOSTINGER:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Your website has 5 main files:
+
+1. index.html               (Main website file)
+2. .htaccess               (Server configuration)
+3. asset-manifest.json     (Build manifest)
+4. static/css/main.*.css   (Styles - 1 file)
+5. static/js/main.*.js     (JavaScript - 1 file)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 STEP-BY-STEP UPLOAD PROCESS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: LOGIN TO HOSTINGER
+──────────────────────────────────────────────────────────────────────
+1. Go to: https://hpanel.hostinger.com
+2. Login with your credentials
+3. Find "ncr-dreamhomes.com"
+4. Click "Manage"
+
+
+STEP 2: OPEN FILE MANAGER
+──────────────────────────────────────────────────────────────────────
+1. In cPanel, click "File Manager" icon
+2. Navigate to "public_html" folder
+3. ⚠️ BACKUP existing files first! (Download them)
+4. Delete all old files in public_html
+
+
+STEP 3: CREATE FOLDER STRUCTURE
+──────────────────────────────────────────────────────────────────────
+Create these folders in public_html:
+
+public_html/
+├── static/
+    ├── css/
+    └── js/
+
+How to create folders:
+1. Click "New Folder" button
+2. Name: "static"
+3. Open "static" folder
+4. Create "css" folder
+5. Create "js" folder
+
+
+STEP 4: CREATE index.html
+──────────────────────────────────────────────────────────────────────
+1. In public_html/, click "New File"
+2. Name: index.html
+3. Right-click index.html → Edit
+4. Copy content from FILE 1 below
+5. Paste into editor
+6. Click "Save"
+
+
+STEP 5: CREATE .htaccess
+──────────────────────────────────────────────────────────────────────
+1. In public_html/, click "New File"
+2. Name: .htaccess
+3. Right-click .htaccess → Edit
+4. Copy content from FILE 2 below
+5. Paste into editor
+6. Click "Save"
+
+Note: If you don't see .htaccess after creating:
+- Click Settings → Enable "Show Hidden Files"
+
+
+STEP 6: CREATE CSS FILE
+──────────────────────────────────────────────────────────────────────
+1. Go to public_html/static/css/
+2. Click "New File"
+3. Name: main.3b3756fc.css
+4. Right-click → Edit
+5. Copy content from FILE 3 below
+6. Paste into editor
+7. Click "Save"
+
+
+STEP 7: CREATE JAVASCRIPT FILE
+──────────────────────────────────────────────────────────────────────
+1. Go to public_html/static/js/
+2. Click "New File"
+3. Name: main.cd3796dd.js
+4. Right-click → Edit
+5. Copy content from FILE 4 below
+6. Paste into editor
+7. Click "Save"
+
+
+STEP 8: CREATE MANIFEST FILES
+──────────────────────────────────────────────────────────────────────
+1. In public_html/, create "asset-manifest.json"
+2. Copy content from FILE 5 below
+
+
+STEP 9: VERIFY & TEST
+──────────────────────────────────────────────────────────────────────
+Your public_html should look like:
+
+public_html/
+├── index.html
+├── .htaccess
+├── asset-manifest.json
+└── static/
+    ├── css/
+    │   └── main.3b3756fc.css
+    └── js/
+        └── main.cd3796dd.js
+
+Test your website:
+✓ Visit https://ncr-dreamhomes.com
+✓ Check all pages load
+✓ Test on mobile
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📄 FILES CONTENT BELOW - COPY & PASTE EACH FILE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+I'll provide each file's content in the next messages...
+
+⏱️ Total Time: 10-15 minutes
+📞 Help: 8287873037
+
+Good luck! Your website will be live soon! 🚀
