@@ -2,26 +2,37 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-// Pages
-import HomePage from './pages/HomePage';
-import NoidaPage from './pages/NoidaPage';
-import GhaziabadPage from './pages/GhaziabadPage';
-import GreaterNoidaPage from './pages/GreaterNoidaPage';
-import GreaterNoidaWestPage from './pages/GreaterNoidaWestPage';
-import JewarAirportPage from './pages/JewarAirportPage';
-import AdminPanel from './pages/AdminPanel';
+// TISS Pages
+import TISSHomePage from './pages/TISSHomePage';
+import IBMMaximoPage from './pages/IBMMaximoPage';
+import MaximoApplicationSuitePage from './pages/MaximoApplicationSuitePage';
+import ITInfrastructurePage from './pages/ITInfrastructurePage';
+import SecuritySolutionsPage from './pages/SecuritySolutionsPage';
+import MobileAppDevelopmentPage from './pages/MobileAppDevelopmentPage';
+import BICognosReportingPage from './pages/BICognosReportingPage';
+import IoTSolutionsPage from './pages/IoTSolutionsPage';
+import Maximo24x7SupportPage from './pages/Maximo24x7SupportPage';
+import ContactPage from './pages/ContactPage';
+import AboutPage from './pages/AboutPage';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/noida" element={<NoidaPage />} />
-        <Route path="/ghaziabad" element={<GhaziabadPage />} />
-        <Route path="/greater-noida" element={<GreaterNoidaPage />} />
-        <Route path="/greater-noida-west" element={<GreaterNoidaWestPage />} />
-        <Route path="/jewar-airport" element={<JewarAirportPage />} />
-        <Route path="/admin" element={<AdminPanel />} />
+        <Route path="/" element={<TISSHomePage />} />
+        <Route path="/ibm-maximo" element={<IBMMaximoPage />} />
+        <Route path="/maximo-application-suite" element={<MaximoApplicationSuitePage />} />
+        <Route path="/upgrade-to-mas" element={<MaximoApplicationSuitePage />} />
+        <Route path="/it-infrastructure-services" element={<ITInfrastructurePage />} />
+        <Route path="/network-infrastructure-solutions" element={<ITInfrastructurePage />} />
+        <Route path="/security-solutions" element={<SecuritySolutionsPage />} />
+        <Route path="/mobile-application-development" element={<MobileAppDevelopmentPage />} />
+        <Route path="/bi-cognos-reporting" element={<BICognosReportingPage />} />
+        <Route path="/birt-reporting" element={<BICognosReportingPage />} />
+        <Route path="/iot-solutions" element={<IoTSolutionsPage />} />
+        <Route path="/maximo-24x7-support" element={<Maximo24x7SupportPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
     </BrowserRouter>
   );
