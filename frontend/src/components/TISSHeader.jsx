@@ -72,16 +72,11 @@ export const TISSHeader = () => {
             {/* Logo */}
             <div className="flex items-center">
               <a href="/" className="flex items-center space-x-3">
-                <div className="relative">
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center shadow-lg">
-                    <span className="text-white font-bold text-2xl">T</span>
-                  </div>
-                  <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-orange-500 rounded-full"></div>
-                </div>
-                <div>
-                  <h1 className="text-xl font-bold text-gray-900 leading-tight">{companyInfo.shortName}</h1>
-                  <p className="text-xs text-blue-600 font-semibold">IBM Maximo & IT Solutions</p>
-                </div>
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_noida-plots-hub/artifacts/w2hy8w9a_TISS%20Logo.jpg" 
+                  alt="TISS - Technoguard Infra & Software Services" 
+                  className="h-16 w-auto object-contain"
+                />
               </a>
             </div>
 
