@@ -111,7 +111,7 @@ const NCRDreamHomesPage = () => {
               </div>
               <div className="mt-8 flex items-center space-x-4">
                 <div className="flex items-center space-x-1">
-                  {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
+                  {[1,2,3,4,5].map(starNum => <Star key={`star-${starNum}`} className="w-5 h-5 fill-yellow-400 text-yellow-400" />)}
                 </div>
                 <p className="text-gray-600">Trusted by 1500+ Happy Customers</p>
               </div>
@@ -136,18 +136,18 @@ const NCRDreamHomesPage = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {properties.map((property, idx) => {
+            {properties.map((property) => {
               const Icon = property.icon;
               return (
-                <div key={idx} className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl hover:shadow-2xl transition-all border border-gray-200">
+                <div key={property.title} className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl hover:shadow-2xl transition-all border border-gray-200">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{property.title}</h3>
                   <p className="text-gray-600 mb-4 leading-relaxed">{property.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {property.locations.map((loc, i) => (
-                      <span key={i} className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">
+                    {property.locations.map((loc) => (
+                      <span key={`${property.title}-${loc}`} className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">
                         {loc}
                       </span>
                     ))}
@@ -177,16 +177,16 @@ const NCRDreamHomesPage = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
-            {filmCityProperties.map((prop, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all">
+            {filmCityProperties.map((prop) => (
+              <div key={prop.title} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{prop.title}</h3>
                 <div className="space-y-2 mb-4">
                   <p className="text-gray-600"><span className="font-semibold">Size:</span> {prop.size}</p>
                   <p className="text-green-600 font-bold text-lg">{prop.price}</p>
                 </div>
                 <div className="space-y-2">
-                  {prop.features.map((feature, i) => (
-                    <div key={i} className="flex items-center space-x-2">
+                  {prop.features.map((feature) => (
+                    <div key={`${prop.title}-${feature}`} className="flex items-center space-x-2">
                       <CheckCircle2 className="w-4 h-4 text-green-600" />
                       <span className="text-sm text-gray-600">{feature}</span>
                     </div>
@@ -210,8 +210,8 @@ const NCRDreamHomesPage = () => {
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {whyChoose.map((reason, idx) => (
-              <div key={idx} className="flex items-start space-x-3 bg-gradient-to-br from-green-50 to-white p-6 rounded-xl shadow-sm">
+            {whyChoose.map((reason) => (
+              <div key={reason} className="flex items-start space-x-3 bg-gradient-to-br from-green-50 to-white p-6 rounded-xl shadow-sm">
                 <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                 <span className="text-gray-700 font-medium">{reason}</span>
               </div>
@@ -307,8 +307,8 @@ const NCRDreamHomesPage = () => {
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">NCR Dream Homes Office Locations</h3>
               
-              {companyInfo.offices.map((office, idx) => (
-                <div key={idx} className="bg-white p-6 rounded-2xl shadow-lg">
+              {companyInfo.offices.map((office) => (
+                <div key={office.name} className="bg-white p-6 rounded-2xl shadow-lg">
                   <h4 className="font-bold text-lg text-gray-900 mb-3">{office.name}</h4>
                   <div className="flex items-start space-x-3 mb-4">
                     <MapPin className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
@@ -373,8 +373,8 @@ const NCRDreamHomesPage = () => {
             <div>
               <h4 className="text-lg font-semibold mb-6">Popular Searches</h4>
               <div className="flex flex-wrap gap-2">
-                {keywords.slice(0, 12).map((keyword, idx) => (
-                  <span key={idx} className="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-xs hover:bg-gray-700 transition-colors cursor-pointer">
+                {keywords.slice(0, 12).map((keyword) => (
+                  <span key={keyword} className="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-xs hover:bg-gray-700 transition-colors cursor-pointer">
                     {keyword}
                   </span>
                 ))}

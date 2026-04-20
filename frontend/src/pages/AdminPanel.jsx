@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet';
 import { Settings, Calendar, FileText, Share2, Database, Zap, Play, Clock } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
@@ -19,18 +19,21 @@ export const AdminPanel = () => {
   const [postCount, setPostCount] = useState(5);
   const [selectedLocations, setSelectedLocations] = useState(['Noida', 'Greater Noida', 'Jewar Airport']);
 
-  useEffect(() => {
-    checkAIStatus();
-  }, []);
-
-  const checkAIStatus = async () => {
+  const checkAIStatus = useCallback(async () => {
     try {
       const response = await axios.get(`${BACKEND_URL}/api/ai-agent/ai-status`);
       setAiStatus(response.data);
     } catch (error) {
-      console.error('AI Status check failed:', error);
+      // AI Status check failed - silently handle in production
+      if (process.env.NODE_ENV === 'development') {
+        console.error('AI Status check failed:', error);
+      }
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    checkAIStatus();
+  }, [checkAIStatus]);
 
   const handleGenerateDaily = async () => {
     setIsGenerating(true);
@@ -64,7 +67,9 @@ export const AdminPanel = () => {
       });
       
       toast.success('Article generated successfully!');
-      console.log('Article:', response.data);
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Article:', response.data);
+      }
     } catch (error) {
       toast.error('Failed to generate article: ' + error.message);
     }

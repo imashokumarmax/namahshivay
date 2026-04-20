@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { SEOHead } from '../components/SEOHead';
 import { Header } from '../components/Header';
 import { Hero } from '../components/Hero';
@@ -30,7 +30,7 @@ const HomePage = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedCategory]);
 
-  const filterProperties = (searchParams = {}) => {
+  const filterProperties = useCallback((searchParams = {}) => {
     let filtered = [...allProperties];
 
     if (selectedCategory) {
@@ -72,7 +72,11 @@ const HomePage = () => {
         document.getElementById('all-properties')?.scrollIntoView({ behavior: 'smooth' });
       }, 300);
     }
-  };
+  }, [allProperties, selectedCategory]);
+
+  useEffect(() => {
+    filterProperties();
+  }, [filterProperties, selectedCategory]);
 
   const handleSearch = (searchParams) => {
     filterProperties(searchParams);
