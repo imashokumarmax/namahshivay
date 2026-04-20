@@ -2,7 +2,10 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-// TISS Pages
+// NCR Dream Homes Pages
+import NCRDreamHomesPage from './pages/NCRDreamHomesPage';
+
+// TISS Pages (keeping for reference)
 import TISSHomePage from './pages/TISSHomePage';
 import IBMMaximoPage from './pages/IBMMaximoPage';
 import MaximoApplicationSuitePage from './pages/MaximoApplicationSuitePage';
@@ -19,7 +22,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<TISSHomePage />} />
+        {/* NCR Dream Homes - Real Estate Website */}
+        <Route path="/" element={<NCRDreamHomesPage />} />
+        
+        {/* TISS Pages - Alternate routes */}
+        <Route path="/tiss" element={<TISSHomePage />} />
         <Route path="/ibm-maximo" element={<IBMMaximoPage />} />
         <Route path="/maximo-application-suite" element={<MaximoApplicationSuitePage />} />
         <Route path="/upgrade-to-mas" element={<MaximoApplicationSuitePage />} />
