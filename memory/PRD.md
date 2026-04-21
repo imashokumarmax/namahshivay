@@ -312,3 +312,17 @@ Farmhouses (5): `…-farmhouse`
 - Add property image uploads (S3 or GridFS).
 - Deploy backend/frontend on Emergent.
 - Add lead-capture API endpoint that stores the consultation form submissions (currently only opens WhatsApp).
+
+---
+
+## CHANGELOG — Feb 2026 (part 2)
+
+### Inner Pages — Contact & Services ✅ (Feb 21, 2026)
+- **Created `/contact-us`** (`NCRContactPage.jsx`): premium hero banner, 3-channel grid (Call / WhatsApp / Email), WhatsApp-wired contact form with success state, sticky "Why Choose Us" + working-hours cards, 3-office cards with live Google Maps iframes + directions/call buttons, final CTA.
+- **Created `/services`** (`NCRServicesPage.jsx`): premium hero banner, 4 core property service cards (Plots/Flats/Villas/Farmhouses) with images linking to property pages, 6 value-added service tiles, 5-step "How It Works" process on dark theme, trust strip (1500+ / 500+ / 100% / 15+), final CTA.
+- **Upgraded `/about-us`** banner to match the new premium style (gradient overlay, breadcrumb, badge, gradient headline, trust CTAs) with meta tags + scroll-to-top.
+- **Wired header links**: `#contact` and `#about` anchors replaced with real `/contact-us` and `/about-us` routes. New `Services` menu item added (desktop + mobile). "Consult Now" button now links to `/contact-us`.
+- **Routes added** in `App.js`: `/contact-us` and `/services`.
+
+### TISS files — UNTOUCHED (per user request)
+All `TISS…` page files and their routes preserved in `App.js` exactly as-is.

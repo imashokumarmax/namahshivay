@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NCRDreamHomesPage from './pages/NCRDreamHomesPage';
 import PropertyPage from './pages/PropertyPage';
 import AboutUsPage from './pages/AboutUsPage';
+import NCRContactPage from './pages/NCRContactPage';
+import NCRServicesPage from './pages/NCRServicesPage';
 
 // TISS Pages (keeping for reference)
 import TISSHomePage from './pages/TISSHomePage';
@@ -27,6 +29,8 @@ function App() {
         {/* NCR Dream Homes - Real Estate Website */}
         <Route path="/" element={<NCRDreamHomesPage />} />
         <Route path="/about-us" element={<AboutUsPage />} />
+        <Route path="/contact-us" element={<NCRContactPage />} />
+        <Route path="/services" element={<NCRServicesPage />} />
         
         {/* Property Pages - General */}
         <Route path="/greater-noida-property" element={<PropertyPage />} />

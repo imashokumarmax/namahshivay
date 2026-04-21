@@ -174,10 +174,13 @@ export const NCRHeader = () => {
                 </div>
               </div>
 
+              <a href="/services" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
+                Services
+              </a>
               <a href="/about-us" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
                 About Us
               </a>
-              <a href="#contact" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
+              <a href="/contact-us" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
                 Contact
               </a>
             </nav>
@@ -188,9 +191,11 @@ export const NCRHeader = () => {
                 <Phone className="w-4 h-4" />
                 <span>WhatsApp</span>
               </a>
-              <Button className="bg-green-600 hover:bg-green-700 text-white">
-                Consult Now
-              </Button>
+              <a href="/contact-us">
+                <Button className="bg-green-600 hover:bg-green-700 text-white">
+                  Consult Now
+                </Button>
+              </a>
             </div>
 
             {/* Mobile menu button */}
@@ -213,10 +218,13 @@ export const NCRHeader = () => {
                 <a href="/" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
                   Home
                 </a>
-                <a href="#about" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
+                <a href="/services" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
+                  Services
+                </a>
+                <a href="/about-us" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
                   About Us
                 </a>
-                <a href="#contact" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
+                <a href="/contact-us" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
                   Contact
                 </a>
                 <a href={`tel:${companyInfo.contact.mobile}`} className="flex items-center space-x-2 text-green-600 font-semibold">

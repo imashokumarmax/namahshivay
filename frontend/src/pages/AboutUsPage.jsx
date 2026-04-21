@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { NCRHeader } from '../components/NCRHeader';
-import { Home, Users, Award, Target, TrendingUp, Shield, CheckCircle2, Phone, Mail, MessageCircle, Star, Heart, Handshake, Globe } from 'lucide-react';
+import { Home, Users, Award, Target, TrendingUp, Shield, CheckCircle2, Phone, Mail, MessageCircle, Star, Heart, Handshake, Globe, ChevronRight, Sparkles } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { companyInfo } from '../data/ncr-dreamhomes-info';
 
 const AboutUsPage = () => {
+  useEffect(() => {
+    document.title = 'About NCR Dream Homes | Trusted Real Estate Partner Delhi-NCR';
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) {
+      meta.setAttribute('content', 'About NCR Dream Homes — 15+ years, 1500+ happy families. Premier real estate consultant for plots, flats, villas & farmhouses in Noida, Greater Noida, Ghaziabad & Jewar.');
+    }
+    window.scrollTo(0, 0);
+  }, []);
+
   const achievements = [
     { number: '1500+', label: 'Happy Families', icon: Users },
     { number: '500+', label: 'Properties Sold', icon: Home },
@@ -69,26 +79,59 @@ const AboutUsPage = () => {
       <NCRHeader />
 
       {/* Hero Banner */}
-      <section 
-        className="relative bg-cover bg-center py-32" 
-        style={{
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://images.unsplash.com/photo-1560518883-ce09059eeffa)',
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center text-white">
-            <div className="inline-block px-6 py-2 bg-green-600/90 backdrop-blur-sm rounded-full text-white text-sm font-semibold mb-6">
+      <section className="relative min-h-[520px] flex items-center overflow-hidden" data-testid="about-hero">
+        <div
+          className="absolute inset-0 bg-cover bg-center scale-105"
+          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1920&q=80')` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/92 via-emerald-900/80 to-green-800/65" />
+        <div className="absolute top-20 right-10 w-72 h-72 bg-green-500/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
+          <nav className="flex items-center space-x-2 text-sm text-green-100 mb-8">
+            <Link to="/" className="hover:text-white transition-colors flex items-center">
+              <Home className="w-4 h-4 mr-1" /> Home
+            </Link>
+            <ChevronRight className="w-4 h-4" />
+            <span className="text-white font-medium">About Us</span>
+          </nav>
+
+          <div className="max-w-3xl text-white">
+            <div className="inline-flex items-center px-4 py-2 bg-green-500/20 backdrop-blur-md border border-green-300/30 rounded-full text-green-100 text-sm font-semibold mb-6">
+              <Sparkles className="w-4 h-4 mr-2 text-green-300" />
               About NCR Dream Homes
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Your Trusted Partner in<br />
-              <span className="text-green-400">Real Estate Excellence</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1] tracking-tight">
+              Your Trusted Partner in{' '}
+              <span className="bg-gradient-to-r from-green-300 via-emerald-200 to-lime-200 bg-clip-text text-transparent">
+                Real Estate Excellence
+              </span>
             </h1>
-            <p className="text-xl sm:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-              NCR Dream Homes - Building Dreams, Creating Legacies Since 2009
+            <p className="text-lg sm:text-xl text-green-50/90 leading-relaxed mb-8 max-w-2xl">
+              NCR Dream Homes — Building Dreams, Creating Legacies Since 2009.
+              15+ years of trust, 1500+ happy families across Delhi-NCR.
             </p>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href={`tel:${companyInfo.contact.mobile}`}
+                className="inline-flex items-center px-7 py-4 bg-white text-emerald-700 rounded-xl hover:bg-green-50 transition-all font-semibold shadow-xl hover:-translate-y-0.5"
+              >
+                <Phone className="w-5 h-5 mr-2" /> {companyInfo.contact.mobile}
+              </a>
+              <Link
+                to="/contact-us"
+                className="inline-flex items-center px-7 py-4 bg-green-500 text-white rounded-xl hover:bg-green-400 transition-all font-semibold shadow-xl hover:-translate-y-0.5 border border-green-400/50"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" /> Contact Us
+              </Link>
+            </div>
           </div>
         </div>
+
+        <svg className="absolute bottom-0 left-0 w-full text-white" viewBox="0 0 1440 80" preserveAspectRatio="none" fill="currentColor">
+          <path d="M0,48 C360,80 1080,0 1440,48 L1440,80 L0,80 Z" />
+        </svg>
       </section>
 
       {/* Achievements Section */}
