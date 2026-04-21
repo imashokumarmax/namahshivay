@@ -178,6 +178,9 @@ export const NCRHeader = () => {
               <a href="/services" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
                 Services
               </a>
+              <a href="/reviews" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
+                Reviews
+              </a>
               <a href="/about-us" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
                 About Us
               </a>
@@ -221,6 +224,9 @@ export const NCRHeader = () => {
                 </a>
                 <a href="/services" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
                   Services
+                </a>
+                <a href="/reviews" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
+                  Reviews
                 </a>
                 <a href="/about-us" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
                   About Us

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { NCRHeader } from '../components/NCRHeader';
+import { SEOKeywordFooter } from '../components/SEOKeywordFooter';
 import {
   Home, MapPin, CheckCircle2, Phone, Mail, MessageCircle, Star, ArrowRight,
   ChevronRight, Shield, TrendingUp, Award, IndianRupee, Sparkles, Building2,

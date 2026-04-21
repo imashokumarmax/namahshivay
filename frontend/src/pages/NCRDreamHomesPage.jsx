@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NCRHeader } from '../components/NCRHeader';
+import { SEOKeywordFooter } from '../components/SEOKeywordFooter';
 import { Home, Building2, TreePine, MapPin, CheckCircle2, ArrowRight, Phone, Mail, MessageCircle, Send, Star } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { companyInfo, keywords } from '../data/ncr-dreamhomes-info';
@@ -337,55 +338,7 @@ const NCRDreamHomesPage = () => {
       </section>
 
       {/* Footer with Keywords */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-12 mb-12">
-            <div>
-              <h3 className="text-2xl font-bold mb-4">NCR Dream Homes</h3>
-              <p className="text-gray-400 mb-6">{companyInfo.tagline}</p>
-              <div className="space-y-3">
-                <a href={`tel:${companyInfo.contact.mobile}`} className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
-                  <Phone className="w-5 h-5" />
-                  <span>{companyInfo.contact.mobile}</span>
-                </a>
-                <a href={`mailto:${companyInfo.contact.email}`} className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
-                  <Mail className="w-5 h-5" />
-                  <span>{companyInfo.contact.email}</span>
-                </a>
-                <a href={`https://wa.me/${companyInfo.contact.whatsapp}`} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3 text-green-400 hover:text-green-300 transition-colors font-semibold">
-                  <MessageCircle className="w-5 h-5" />
-                  <span>WhatsApp NCR Dream Homes</span>
-                </a>
-              </div>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-6">NCR Dream Homes Properties</h4>
-              <ul className="space-y-2 text-gray-400 text-sm">
-                <li>Residential Plots Noida - NCR Dream Homes</li>
-                <li>Residential Plots Greater Noida - NCR Dream Homes</li>
-                <li>Residential Plots Jewar - NCR Dream Homes</li>
-                <li>Farm Houses Yamuna Expressway - NCR Dream Homes</li>
-                <li>Residential Flats Noida - NCR Dream Homes</li>
-                <li>Villas Near Jewar Airport - NCR Dream Homes</li>
-                <li>Film City Properties - NCR Dream Homes</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-6">Popular Searches</h4>
-              <div className="flex flex-wrap gap-2">
-                {keywords.slice(0, 12).map((keyword) => (
-                  <span key={keyword} className="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-xs hover:bg-gray-700 transition-colors cursor-pointer">
-                    {keyword}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-gray-500">
-            <p>&copy; {new Date().getFullYear()} NCR Dream Homes. All rights reserved. Premium Real Estate in Noida, Greater Noida, Jewar & Yamuna Expressway.</p>
-          </div>
-        </div>
-      </footer>
+      <SEOKeywordFooter />
     </div>
   );
 };

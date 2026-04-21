@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { NCRHeader } from '../components/NCRHeader';
+import { SEOKeywordFooter } from '../components/SEOKeywordFooter';
 import {
   Home, Phone, Mail, MapPin, MessageCircle, Clock, Send, CheckCircle2,
   ChevronRight, Sparkles, Building2, Navigation
@@ -385,6 +386,8 @@ const NCRContactPage = () => {
           </a>
         </div>
       </section>
+
+      <SEOKeywordFooter />
 
       {/* FOOTER */}
       <footer className="bg-gray-900 text-white py-12">

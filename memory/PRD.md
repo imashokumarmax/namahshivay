@@ -332,3 +332,30 @@ All `TISS…` page files and their routes preserved in `App.js` exactly as-is.
 - Embedded inside `NCRHeader` → automatically appears on **every NCR page** (Home, Properties×20, About, Contact, Services).
 - Features: animated pulse rings, red "1" notification badge, hover-scale, teaser tooltip after 3 s, expandable chat popup with WhatsApp-style header + mock message + input form + Call CTA. Submit opens `wa.me/<number>` with prefilled text.
 - `data-testid`s: `whatsapp-float`, `whatsapp-float-btn`, `whatsapp-float-popup`, `whatsapp-float-form`, `whatsapp-float-input`, `whatsapp-float-send`.
+
+---
+
+## CHANGELOG — Feb 2026 (part 3)
+
+### SEO Keyword Footer ✅ (Feb 21, 2026)
+- Extracted **70+ unique keywords** from the 4 client-provided footer images (home / Noida / Greater Noida / Ghaziabad) and **deduplicated** them.
+- Organized into 4 SEO-dense columns: "Plots & Farmhouse Locations", "Authority & Ready-to-Move", "Investment & Greenery Farmhouses", "Modern Amenities & Gated Farmhouses".
+- Every keyword is an internal link pointing to the most relevant property URL (boosts internal SEO graph).
+- Built `SEOKeywordFooter.jsx` (dark #1a1f2e background): intro headline → 4-col keyword grid → divider → brand + 3 office cards (with updated addresses + Google-Maps links) → social icons → contact strip.
+- Added to **every NCR page**: Home, all 20 property pages, About Us, Contact, Services, and the new Reviews page.
+
+### Reviews Page `/reviews` ✅
+- 120 authentic, diverse reviews created (`reviews-data.js`) with Indian names, 10 avatar gradients, 15 city/area/type combos, 50 unique feedback paragraphs, dates, verified badges.
+- Rating distribution: 95% five-star, 5% four-star → overall 4.95/5.
+- Built `NCRReviewsPage.jsx`: banner with 4.95 rating card + breakdown bars, 4-metric trust strip, filter bar (city × property-type), 3-col review grid with quote icon, colored avatars, stars, verified badge, property-type chip, and "Load More" pagination (12 per page).
+- Route `/reviews` added in `App.js`; header link added (desktop + mobile).
+
+### Office Addresses Updated
+`ncr-dreamhomes-info.js` now reflects the real office addresses from the provided images:
+1. Noida Office (i-Thum Tower) — C-520, 5th Floor, Sector 62, Noida 201301
+2. Ghaziabad Office (Indirapuram) — 324, Gyan Khand 1 & II, Indirapuram, Ghaziabad 201014
+3. Noida Office (Logix Technova) — B-333, 3rd Floor, B-Block, Sector 132, Noida
+Email updated to `ashokumarmax@gmail.com` per image.
+
+### Header Nav
+Final nav order: Home | Properties | Services | **Reviews** | About Us | Contact

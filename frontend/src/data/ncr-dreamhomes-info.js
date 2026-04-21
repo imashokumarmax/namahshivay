@@ -5,37 +5,37 @@ export const companyInfo = {
   tagline: 'Your Trusted Partner for Prime Real Estate in Delhi-NCR',
   
   contact: {
-    email: 'info@ncrdreamhomes.com',
+    email: 'ashokumarmax@gmail.com',
     mobile: '+91-8287673037',
-    phone: '+91-011-24126124',
+    phone: '+91-8287673037',
     whatsapp: '918287673037',
     website: 'www.ncrdreamhomes.com'
   },
   
   offices: [
     {
-      name: 'Head Office - Noida',
-      address: 'A-118 Sector-136, 4th Floor',
-      locality: 'Noida, Uttar Pradesh - 201304',
-      fullAddress: 'A-118 Sector-136, 4th Floor, Noida, Uttar Pradesh - 201304',
-      googleMapsLink: 'https://www.google.com/maps/search/?api=1&query=28.5355,77.3910',
-      coordinates: { lat: 28.5355, lng: 77.3910 }
+      name: 'Noida Office (i-Thum Tower)',
+      address: 'C-520, 5th Floor, i-Thum Tower',
+      locality: 'Sector 62, Noida - 201301',
+      fullAddress: 'C-520, 5th Floor, i-Thum Tower, Sector 62, Noida - 201301',
+      googleMapsLink: 'https://www.google.com/maps/search/?api=1&query=28.6266,77.3726',
+      coordinates: { lat: 28.6266, lng: 77.3726 }
     },
     {
-      name: 'Branch Office - Greater Noida',
-      address: 'Plot No. 45, Sector Omega-1',
-      locality: 'Greater Noida, Uttar Pradesh - 201308',
-      fullAddress: 'Plot No. 45, Sector Omega-1, Greater Noida, Uttar Pradesh - 201308',
-      googleMapsLink: 'https://www.google.com/maps/search/?api=1&query=28.4744,77.5040',
-      coordinates: { lat: 28.4744, lng: 77.5040 }
+      name: 'Ghaziabad Office (Indirapuram)',
+      address: '324, Gyan Khand 1, Gyan Khand II',
+      locality: 'Indirapuram, Ghaziabad - 201014',
+      fullAddress: '324, Gyan Khand 1, Gyan Khand II, Indirapuram, Ghaziabad - 201014',
+      googleMapsLink: 'https://www.google.com/maps/search/?api=1&query=28.6437,77.3800',
+      coordinates: { lat: 28.6437, lng: 77.3800 }
     },
     {
-      name: 'Site Office - Jewar',
-      address: 'Near Jewar Airport, Yamuna Expressway',
-      locality: 'Jewar, Gautam Buddha Nagar - 203135',
-      fullAddress: 'Near Jewar Airport, Yamuna Expressway, Jewar, Gautam Buddha Nagar - 203135',
-      googleMapsLink: 'https://www.google.com/maps/search/?api=1&query=28.1215,77.4690',
-      coordinates: { lat: 28.1215, lng: 77.4690 }
+      name: 'Noida Office (Logix Technova)',
+      address: 'B-333, 3rd Floor, B-Block, Logix Technova',
+      locality: 'Sector 132, Noida',
+      fullAddress: 'B-333, 3rd Floor, B-Block, Logix Technova, Sector 132, Noida',
+      googleMapsLink: 'https://www.google.com/maps/search/?api=1&query=28.5068,77.3850',
+      coordinates: { lat: 28.5068, lng: 77.3850 }
     }
   ],
   
