@@ -264,3 +264,51 @@ Premium real estate platform for property listings across Noida, Ghaziabad, Grea
 - Social media integration pending API keys
 - Full automation planned for Phase 3
 - SEO optimization based on 2026 real estate trends
+
+---
+
+## CHANGELOG — Feb 2026
+
+### Premium Property Pages Redesign ✅
+**Date:** Feb 21, 2026
+
+All 20 SEO property URLs now render with a fully redesigned, attractive & professional `PropertyPage.jsx` template:
+- **Slug bug fixed**: replaced broken `useParams()` with `useLocation()` + pathname mapping — previously every property URL was rendering "Page Not Found".
+- **New banner**: full-width hero with gradient overlay, breadcrumb, location badge, gradient H1, price-from strip, Call + WhatsApp CTAs, trust row (stars/verified/RERA), and floating gallery stack.
+- **Stats strip**: 15+ Years / 500+ Sold / 100% Approved / 3X+ ROI.
+- **Intro + image gallery**: 4-thumb interactive gallery, location pill overlay.
+- **Highlights grid**: 6 numbered investment highlights per page.
+- **Amenities section**: 8 amenities with icons + supporting image.
+- **Connectivity section**: dark-themed map-style "Location Advantage" with 5 connectivity points per location.
+- **Consultation form**: WhatsApp-linked form (pushes prefilled message), sticky sidebar design.
+- **FAQ accordion**: 1–3 FAQs per URL answering SEO-rich questions.
+- **Final CTA**: Call / WhatsApp / Email trio + gradient footer.
+
+### Enhanced SEO Data (`property-pages-data.js`)
+Every one of the 20 URLs now includes:
+- `title`, `metaDescription`, `keywords` (auto-injected into `<head>`)
+- `breadcrumb`, `badge`, `heroTitle`, `heroLocation`, `heroDescription`, `priceFrom`
+- `bannerImage` + 4-image `gallery` matched to property type (villa/flat/plot/farmhouse)
+- `amenities` (8), `connectivity` (5), `highlights` (6)
+- Long-form `content.intro` with keyword-dense SEO paragraphs
+- Location-specific `faqs`
+
+### URLs shipped (all routed in `App.js`)
+General (5): `/greater-noida-property`, `/noida-property`, `/greater-noida-west-property`, `/ghaziabad-property`, `/jewar-airport-property`  
+Plots (5): `…-residential-plots`  
+Flats (5): `…-residential-flats`  
+Farmhouses (5): `…-farmhouse`
+
+---
+
+## ROADMAP (Remaining)
+
+### P1 (next)
+- Clean up dead `TISS…` pages & legacy `HomePage.jsx` (still imported in `App.js` for backward compat).
+- Split `NCRDreamHomesPage.jsx` (~385 lines) into Hero / Features / Properties / Footer sub-components.
+
+### P2 (future)
+- Move static property data to MongoDB backend + admin panel to edit.
+- Add property image uploads (S3 or GridFS).
+- Deploy backend/frontend on Emergent.
+- Add lead-capture API endpoint that stores the consultation form submissions (currently only opens WhatsApp).
