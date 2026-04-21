@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // NCR Dream Homes Pages
 import NCRDreamHomesPage from './pages/NCRDreamHomesPage';
+import PropertyPage from './pages/PropertyPage';
 
 // TISS Pages (keeping for reference)
 import TISSHomePage from './pages/TISSHomePage';
@@ -24,6 +25,34 @@ function App() {
       <Routes>
         {/* NCR Dream Homes - Real Estate Website */}
         <Route path="/" element={<NCRDreamHomesPage />} />
+        
+        {/* Property Pages - General */}
+        <Route path="/greater-noida-property" element={<PropertyPage />} />
+        <Route path="/noida-property" element={<PropertyPage />} />
+        <Route path="/greater-noida-west-property" element={<PropertyPage />} />
+        <Route path="/ghaziabad-property" element={<PropertyPage />} />
+        <Route path="/jewar-airport-property" element={<PropertyPage />} />
+        
+        {/* Property Pages - Residential Plots */}
+        <Route path="/greater-noida-residential-plots" element={<PropertyPage />} />
+        <Route path="/noida-residential-plots" element={<PropertyPage />} />
+        <Route path="/greater-noida-west-residential-plots" element={<PropertyPage />} />
+        <Route path="/ghaziabad-residential-plots" element={<PropertyPage />} />
+        <Route path="/jewar-airport-residential-plots" element={<PropertyPage />} />
+        
+        {/* Property Pages - Residential Flats */}
+        <Route path="/greater-noida-residential-flats" element={<PropertyPage />} />
+        <Route path="/noida-residential-flats" element={<PropertyPage />} />
+        <Route path="/greater-noida-west-residential-flats" element={<PropertyPage />} />
+        <Route path="/ghaziabad-residential-flats" element={<PropertyPage />} />
+        <Route path="/jewar-airport-residential-flats" element={<PropertyPage />} />
+        
+        {/* Property Pages - Farmhouses */}
+        <Route path="/greater-noida-farmhouse" element={<PropertyPage />} />
+        <Route path="/noida-farmhouse" element={<PropertyPage />} />
+        <Route path="/greater-noida-west-farmhouse" element={<PropertyPage />} />
+        <Route path="/ghaziabad-farmhouse" element={<PropertyPage />} />
+        <Route path="/jewar-airport-farmhouse" element={<PropertyPage />} />
         
         {/* TISS Pages - Alternate routes */}
         <Route path="/tiss" element={<TISSHomePage />} />

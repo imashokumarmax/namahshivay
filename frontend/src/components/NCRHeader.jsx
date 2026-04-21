@@ -6,13 +6,36 @@ import { companyInfo } from '../data/ncr-dreamhomes-info';
 export const NCRHeader = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const propertyTypes = [
-    'Residential Plots',
-    'Residential Flats',
-    'Farm Houses',
-    'Villas Near Jewar Airport',
-    'Film City Properties',
-    'Mix Land Use'
+  const propertyLocations = [
+    { name: 'Greater Noida Properties', path: '/greater-noida-property' },
+    { name: 'Noida Properties', path: '/noida-property' },
+    { name: 'Greater Noida West Properties', path: '/greater-noida-west-property' },
+    { name: 'Ghaziabad Properties', path: '/ghaziabad-property' },
+    { name: 'Jewar Airport Properties', path: '/jewar-airport-property' }
+  ];
+
+  const residentialPlots = [
+    { name: 'Plots in Greater Noida', path: '/greater-noida-residential-plots' },
+    { name: 'Plots in Noida', path: '/noida-residential-plots' },
+    { name: 'Plots in Greater Noida West', path: '/greater-noida-west-residential-plots' },
+    { name: 'Plots in Ghaziabad', path: '/ghaziabad-residential-plots' },
+    { name: 'Plots Near Jewar Airport', path: '/jewar-airport-residential-plots' }
+  ];
+
+  const residentialFlats = [
+    { name: 'Flats in Greater Noida', path: '/greater-noida-residential-flats' },
+    { name: 'Flats in Noida', path: '/noida-residential-flats' },
+    { name: 'Flats in Greater Noida West', path: '/greater-noida-west-residential-flats' },
+    { name: 'Flats in Ghaziabad', path: '/ghaziabad-residential-flats' },
+    { name: 'Flats Near Jewar Airport', path: '/jewar-airport-residential-flats' }
+  ];
+
+  const farmhouses = [
+    { name: 'Farmhouse in Greater Noida', path: '/greater-noida-farmhouse' },
+    { name: 'Farmhouse in Noida', path: '/noida-farmhouse' },
+    { name: 'Farmhouse in Greater Noida West', path: '/greater-noida-west-farmhouse' },
+    { name: 'Farmhouse in Ghaziabad', path: '/ghaziabad-farmhouse' },
+    { name: 'Farmhouse Near Jewar Airport', path: '/jewar-airport-farmhouse' }
   ];
 
   return (
@@ -88,17 +111,65 @@ export const NCRHeader = () => {
                   <ChevronDown className="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform" />
                 </button>
                 
-                <div className="absolute top-full left-0 mt-2 w-72 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                  <div className="py-2">
-                    {propertyTypes.map((type, idx) => (
-                      <a
-                        key={idx}
-                        href={`#${type.toLowerCase().replace(/\s+/g, '-')}`}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors"
-                      >
-                        {type}
-                      </a>
-                    ))}
+                <div className="absolute top-full left-0 mt-2 w-[800px] bg-white shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                  <div className="p-6">
+                    <div className="grid grid-cols-4 gap-6">
+                      {/* General Properties */}
+                      <div>
+                        <h4 className="font-bold text-gray-900 mb-3 text-sm">By Location</h4>
+                        {propertyLocations.map((loc) => (
+                          <a
+                            key={loc.path}
+                            href={loc.path}
+                            className="block px-3 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 rounded transition-colors"
+                          >
+                            {loc.name}
+                          </a>
+                        ))}
+                      </div>
+
+                      {/* Residential Plots */}
+                      <div>
+                        <h4 className="font-bold text-gray-900 mb-3 text-sm">Residential Plots</h4>
+                        {residentialPlots.map((plot) => (
+                          <a
+                            key={plot.path}
+                            href={plot.path}
+                            className="block px-3 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 rounded transition-colors"
+                          >
+                            {plot.name}
+                          </a>
+                        ))}
+                      </div>
+
+                      {/* Residential Flats */}
+                      <div>
+                        <h4 className="font-bold text-gray-900 mb-3 text-sm">Residential Flats</h4>
+                        {residentialFlats.map((flat) => (
+                          <a
+                            key={flat.path}
+                            href={flat.path}
+                            className="block px-3 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 rounded transition-colors"
+                          >
+                            {flat.name}
+                          </a>
+                        ))}
+                      </div>
+
+                      {/* Farmhouses */}
+                      <div>
+                        <h4 className="font-bold text-gray-900 mb-3 text-sm">Farmhouses</h4>
+                        {farmhouses.map((farm) => (
+                          <a
+                            key={farm.path}
+                            href={farm.path}
+                            className="block px-3 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 rounded transition-colors"
+                          >
+                            {farm.name}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
