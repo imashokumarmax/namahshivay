@@ -174,7 +174,7 @@ export const NCRHeader = () => {
                 </div>
               </div>
 
-              <a href="#about" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
+              <a href="/about-us" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
                 About Us
               </a>
               <a href="#contact" className="text-gray-700 hover:text-green-600 font-medium transition-colors">
