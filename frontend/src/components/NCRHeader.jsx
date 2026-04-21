@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Menu, X, ChevronDown, Facebook, Instagram, Twitter, Youtube, Linkedin } from 'lucide-react';
 import { Button } from './ui/button';
 import { companyInfo } from '../data/ncr-dreamhomes-info';
+import { WhatsAppFloatingButton } from './WhatsAppFloatingButton';
 
 export const NCRHeader = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -236,6 +237,9 @@ export const NCRHeader = () => {
           )}
         </div>
       </header>
+
+      {/* Floating WhatsApp chat — appears on every NCR page */}
+      <WhatsAppFloatingButton />
     </>
   );
 };

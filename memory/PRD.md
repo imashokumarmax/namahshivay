@@ -326,3 +326,9 @@ Farmhouses (5): `…-farmhouse`
 
 ### TISS files — UNTOUCHED (per user request)
 All `TISS…` page files and their routes preserved in `App.js` exactly as-is.
+
+### Floating WhatsApp Chat Bubble ✅ (Feb 21, 2026)
+- Created `/app/frontend/src/components/WhatsAppFloatingButton.jsx`.
+- Embedded inside `NCRHeader` → automatically appears on **every NCR page** (Home, Properties×20, About, Contact, Services).
+- Features: animated pulse rings, red "1" notification badge, hover-scale, teaser tooltip after 3 s, expandable chat popup with WhatsApp-style header + mock message + input form + Call CTA. Submit opens `wa.me/<number>` with prefilled text.
+- `data-testid`s: `whatsapp-float`, `whatsapp-float-btn`, `whatsapp-float-popup`, `whatsapp-float-form`, `whatsapp-float-input`, `whatsapp-float-send`.
