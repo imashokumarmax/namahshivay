@@ -8,7 +8,6 @@ import PropertyPage from './pages/PropertyPage';
 import AboutUsPage from './pages/AboutUsPage';
 import NCRContactPage from './pages/NCRContactPage';
 import NCRServicesPage from './pages/NCRServicesPage';
-import NCRReviewsPage from './pages/NCRReviewsPage';
 
 // TISS Pages (keeping for reference)
 import TISSHomePage from './pages/TISSHomePage';
@@ -32,7 +31,6 @@ function App() {
         <Route path="/about-us" element={<AboutUsPage />} />
         <Route path="/contact-us" element={<NCRContactPage />} />
         <Route path="/services" element={<NCRServicesPage />} />
-        <Route path="/reviews" element={<NCRReviewsPage />} />
         
         {/* Property Pages - General */}
         <Route path="/greater-noida-property" element={<PropertyPage />} />

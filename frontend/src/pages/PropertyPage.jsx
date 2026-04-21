@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { NCRHeader } from '../components/NCRHeader';
 import { SEOKeywordFooter } from '../components/SEOKeywordFooter';
+import { NCRReviewsSection } from '../components/NCRReviewsSection';
 import {
   Home, MapPin, CheckCircle2, Phone, Mail, MessageCircle, Star, ArrowRight,
   ChevronRight, Shield, TrendingUp, Award, IndianRupee, Sparkles, Building2,
@@ -512,47 +513,9 @@ const PropertyPage = () => {
         </div>
       </section>
 
-      {/* ============= FOOTER ============= */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-3 bg-gradient-to-r from-green-400 to-emerald-300 bg-clip-text text-transparent">
-                NCR Dream Homes
-              </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                Premium Real Estate in {pageData.heroLocation} | {companyInfo.tagline}
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold text-white mb-3">Quick Links</h4>
-              <div className="space-y-2 text-sm">
-                <Link to="/" className="block text-gray-400 hover:text-white transition-colors">Home</Link>
-                <Link to="/about-us" className="block text-gray-400 hover:text-white transition-colors">About Us</Link>
-                <Link to="/greater-noida-property" className="block text-gray-400 hover:text-white transition-colors">Greater Noida</Link>
-                <Link to="/jewar-airport-property" className="block text-gray-400 hover:text-white transition-colors">Jewar Airport</Link>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-semibold text-white mb-3">Contact</h4>
-              <div className="space-y-2 text-sm">
-                <a href={`tel:${companyInfo.contact.mobile}`} className="flex items-center text-gray-400 hover:text-white transition-colors">
-                  <Phone className="w-4 h-4 mr-2" /> {companyInfo.contact.mobile}
-                </a>
-                <a href={`mailto:${companyInfo.contact.email}`} className="flex items-center text-gray-400 hover:text-white transition-colors">
-                  <Mail className="w-4 h-4 mr-2" /> {companyInfo.contact.email}
-                </a>
-                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-400 hover:text-white transition-colors">
-                  <MessageCircle className="w-4 h-4 mr-2" /> WhatsApp
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
-            <p>&copy; {new Date().getFullYear()} NCR Dream Homes. All rights reserved. {pageData.heroLocation} Properties.</p>
-          </div>
-        </div>
-      </footer>
+      {/* ============= REVIEWS + SEO FOOTER ============= */}
+      <NCRReviewsSection />
+      <SEOKeywordFooter />
     </div>
   );
 };

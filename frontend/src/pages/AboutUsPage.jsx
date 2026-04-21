@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { NCRHeader } from '../components/NCRHeader';
 import { SEOKeywordFooter } from '../components/SEOKeywordFooter';
+import { NCRReviewsSection } from '../components/NCRReviewsSection';
 import { Home, Users, Award, Target, TrendingUp, Shield, CheckCircle2, Phone, Mail, MessageCircle, Star, Heart, Handshake, Globe, ChevronRight, Sparkles } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { companyInfo } from '../data/ncr-dreamhomes-info';
@@ -367,6 +368,7 @@ const AboutUsPage = () => {
         </div>
       </section>
 
+      <NCRReviewsSection />
       <SEOKeywordFooter />
 
       {/* Footer */}

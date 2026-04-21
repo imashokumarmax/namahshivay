@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NCRHeader } from '../components/NCRHeader';
 import { SEOKeywordFooter } from '../components/SEOKeywordFooter';
+import { NCRReviewsSection } from '../components/NCRReviewsSection';
 import { Home, Building2, TreePine, MapPin, CheckCircle2, ArrowRight, Phone, Mail, MessageCircle, Send, Star } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { companyInfo, keywords } from '../data/ncr-dreamhomes-info';
@@ -338,6 +339,7 @@ const NCRDreamHomesPage = () => {
       </section>
 
       {/* Footer with Keywords */}
+      <NCRReviewsSection />
       <SEOKeywordFooter />
     </div>
   );

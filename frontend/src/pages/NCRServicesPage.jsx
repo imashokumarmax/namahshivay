@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { NCRHeader } from '../components/NCRHeader';
 import { SEOKeywordFooter } from '../components/SEOKeywordFooter';
+import { NCRReviewsSection } from '../components/NCRReviewsSection';
 import {
   Home, ChevronRight, Sparkles, Phone, MessageCircle, Mail,
   TreePine, Building2, Warehouse, Trees, ArrowRight, Shield, HandCoins,
@@ -303,6 +304,7 @@ const NCRServicesPage = () => {
         </div>
       </section>
 
+      <NCRReviewsSection />
       <SEOKeywordFooter />
 
       {/* FOOTER */}

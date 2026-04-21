@@ -5,7 +5,7 @@
 **Contact**: 8287873037  
 **Email**: ncr.dreamhomes@gmail.com  
 **Website**: https://ncr-dreamhomes.com/  
-**Preview URL**: https://noida-plots-hub.preview.emergentagent.com
+**Preview URL**: https://dream-homes-staging.preview.emergentagent.com
 
 Premium real estate platform for property listings across Noida, Ghaziabad, Greater Noida, Greater Noida West, and Jewar Airport regions with AI-powered automation.
 
@@ -359,3 +359,13 @@ Email updated to `ashokumarmax@gmail.com` per image.
 
 ### Header Nav
 Final nav order: Home | Properties | Services | **Reviews** | About Us | Contact
+
+---
+
+## Update: Feb 2026 — Embedded Reviews + Global SEO Footer
+- ✅ Created `/app/frontend/src/components/NCRReviewsSection.jsx` — compact embeddable reviews block (120 reviews, 6-at-a-time with "Show More", full stats strip).
+- ✅ Embedded reviews section on Homepage, About Us, Contact, Services, and all 20 Property pages (placed directly above `SEOKeywordFooter`).
+- ✅ Replaced PropertyPage's custom mini-footer with the unified `SEOKeywordFooter` so the ~70 keyword links appear on every inner page, matching the homepage.
+- ✅ Removed standalone `/reviews` route: deleted `NCRReviewsPage.jsx`, removed the import/route in `App.js`, and removed the "Reviews" link from NCRHeader (desktop + mobile nav).
+- Verified via screenshot + route check (`/reviews` now returns the empty no-match fallback, length 18 chars).
+
